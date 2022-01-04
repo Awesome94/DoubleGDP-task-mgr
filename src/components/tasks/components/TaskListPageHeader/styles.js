@@ -11,6 +11,7 @@ export const PageHeader = styled.div`
     font-size: 30px;
     display: flex;
     width: 90%;
+    height: 60px;
   }
 `
 

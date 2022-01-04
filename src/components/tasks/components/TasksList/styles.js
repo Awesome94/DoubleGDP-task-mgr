@@ -80,7 +80,6 @@ export const TaskItems = styled.div`
   @media only screen and (max-width: 768px) {
     margin: 2px;
     width: 100%;
-    gap: 25px;
     margin-right: -200px;
   }
 `
