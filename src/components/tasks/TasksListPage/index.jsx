@@ -1,8 +1,8 @@
 import React from 'react'
 
-import TaskListPageHeader from './TaskListPageHeader'
-import TasksList from './TasksList'
-import TasksStatistics from './TasksStatistics'
+import TaskListPageHeader from '../components/TaskListPageHeader'
+import TasksList from '../components/TasksList'
+import TasksStatistics from '../components/TasksStatistics'
 
 const TaskListPage = () => {
   return (

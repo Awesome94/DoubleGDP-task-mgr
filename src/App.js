@@ -1,5 +1,5 @@
 import './App.css'
-import AddTask from './components/tasks/AddTask'
+import CreateNewTask from './components/tasks/components/CreateNewTask'
 import TaskListPage from './components/tasks/TasksListPage'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -11,7 +11,7 @@ function App() {
       </div>
       <Routes>
         <Route index element={<TaskListPage />} />
-        <Route path="add" element={<AddTask />} />
+        <Route path="add" element={<CreateNewTask />} />
       </Routes>
     </BrowserRouter>
   )

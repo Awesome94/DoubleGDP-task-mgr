@@ -8,7 +8,7 @@ export const useTasks = () => useContext(TaskContext)
 const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([])
 
-  const addTask = (task, description, avatarUrl) => {
+  const createTask = (task, description, avatarUrl) => {
     fetch('https://picsum.photos/200')
       .then((res) =>
         setTasks([
@@ -53,7 +53,7 @@ const TaskProvider = ({ children }) => {
   }
 
   return (
-    <TaskContext.Provider value={{ tasks, addTask, setTaskStatus }}>
+    <TaskContext.Provider value={{ tasks, createTask, setTaskStatus }}>
       {children}
     </TaskContext.Provider>
   )

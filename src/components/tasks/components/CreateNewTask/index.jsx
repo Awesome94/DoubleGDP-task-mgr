@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import Button from '../../common/Button'
-import Input from '../../common/TextInput'
+import Button from '../../../common/Button'
+import Input from '../../../common/TextInput'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
-import { useTasks } from '../../../providers/TaskProvider'
+import { useTasks } from '../../../../providers/TaskProvider'
 
-const AddTaskForm = styled.form`
+const CreateTaskForm = styled.form`
   display: flex;
   width: 80%;
   flex-direction: column;
@@ -23,9 +23,9 @@ const Title = styled.h1`
   }
 `
 
-const AddTask = () => {
+const CreateNewTask = () => {
   const navigate = useNavigate()
-  const { addTask } = useTasks()
+  const { createTask } = useTasks()
   const [taskData, setTaskData] = useState({
     taskName: '',
     description: '',
@@ -35,7 +35,7 @@ const AddTask = () => {
 
   const handleSubmit = () => {
     const { taskName, description, avatarUrl } = taskData
-    addTask(taskName, description, avatarUrl)
+    createTask(taskName, description, avatarUrl)
     return navigate('/')
   }
 
@@ -46,7 +46,7 @@ const AddTask = () => {
   }
 
   return (
-    <AddTaskForm onSubmit={handleSubmit}>
+    <CreateTaskForm onSubmit={handleSubmit}>
       <Title>Add Task</Title>
       <Input
         placeholder="Task Name"
@@ -70,8 +70,8 @@ const AddTask = () => {
         onChange={onChange}
       />
       <Button text="ADD" />
-    </AddTaskForm>
+    </CreateTaskForm>
   )
 }
 
-export default AddTask
+export default CreateNewTask
