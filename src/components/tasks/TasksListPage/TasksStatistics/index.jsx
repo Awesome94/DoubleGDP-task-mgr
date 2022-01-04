@@ -38,7 +38,7 @@ const TasksStatistics = () => {
     {
       propVal: 'completitionRate',
       label: 'Completion Rate',
-      value: percentage + '%' || 0 + '%',
+      value: (percentage || 0) + '%',
     },
   ]
 

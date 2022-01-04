@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { ReactComponent as DarkModeIcon } from '../../../../icons/darkmodeiconIcon.svg'
 import { ReactComponent as PlusIcon } from '../../../../icons/plusIcon.svg'
 import { Link } from 'react-router-dom'
-import { ThemeContext, themes } from '../../../../context/ThemeContext'
+import { ThemeContext, themes } from '../../../../context/Theme/ThemeContext'
 
 const PageHeader = styled.div`
   display: flex;
