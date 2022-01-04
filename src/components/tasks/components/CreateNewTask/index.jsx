@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import Button from '../../../common/Button'
-import Input from '../../../common/TextInput'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+
+import Button from '../../../common/Button'
+import Input from '../../../common/TextInput'
 import { useTasks } from '../../../../providers/TaskProvider'
 
 const CreateTaskForm = styled.form`
@@ -22,10 +23,19 @@ const Title = styled.h1`
     width: 100%;
   }
 `
+const ErrorMsg = styled.div`
+  display: flex;
+  font-size: 12px;
+  color: red;
+  margin-left: 25px;
+  margin-top: -20px;
+`
 
 const CreateNewTask = () => {
   const navigate = useNavigate()
   const { createTask } = useTasks()
+  const [error, setError] = useState(false)
+
   const [taskData, setTaskData] = useState({
     taskName: '',
     description: '',
@@ -33,15 +43,22 @@ const CreateNewTask = () => {
     timeStamp: '',
   })
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault()
     const { taskName, description, avatarUrl } = taskData
+    if (taskName.length === 0 && description.length === 0) {
+      return navigate('/')
+    }
+    if (taskName.length === 0 || description.length === 0) {
+      setError(true)
+      return false
+    }
     createTask(taskName, description, avatarUrl)
     return navigate('/')
   }
 
   const onChange = (e) => {
     const { name, value } = e.target
-    console.log(name, value)
     setTaskData({ ...taskData, [name]: value })
   }
 
@@ -55,6 +72,9 @@ const CreateNewTask = () => {
         value={taskData.taskName}
         onChange={onChange}
       />
+      {error && !taskData.taskName.length && (
+        <ErrorMsg>{'Task Name can not be blank'}</ErrorMsg>
+      )}
       <Input
         placeholder="Task Description"
         name="description"
@@ -62,6 +82,9 @@ const CreateNewTask = () => {
         value={taskData.description}
         onChange={onChange}
       />
+      {error && !taskData.description.length && (
+        <ErrorMsg>{'Task description can not be blank'}</ErrorMsg>
+      )}
       <Input
         placeholder="Avatar URL"
         name="avatarUrl"

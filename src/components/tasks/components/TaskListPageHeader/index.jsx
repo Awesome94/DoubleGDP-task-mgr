@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { ReactComponent as DarkModeIcon } from '../../../../icons/darkmodeiconIcon.svg'
-import { ReactComponent as PlusIcon } from '../../../../icons/plusIcon.svg'
 import { Link } from 'react-router-dom'
+
+import { ReactComponent as PlusIcon } from '../../../../icons/plusIcon.svg'
 import { ThemeContext, themes } from '../../../../context/Theme/ThemeContext'
+import { ReactComponent as DarkModeIcon } from '../../../../icons/darkmodeiconIcon.svg'
+
 import { PageHeader, Title, HeaderIcon } from './styles'
 
 const TaskListPageHeader = () => {
