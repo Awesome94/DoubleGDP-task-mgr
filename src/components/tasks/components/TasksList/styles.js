@@ -1,29 +1,38 @@
 import styled from 'styled-components'
 
 export const TaskName = styled.h1`
-  display: flex;
-  width: 40%;
-  flex-direction: column;
   font-weight: 550;
   color: grey;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @media only screen and (max-width: 768px) {
     font-size: 18px;
     padding-top: 10px;
-    width: 200px;
-    margin-bottom: 0.5rem;
+    width: 150px;
+    margin-bottom: -0.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 25px;
   }
 `
+
 export const TaskDescription = styled.h6`
   margin-top: -20px;
   font-weight: 200;
   font-size: 20px;
   color: grey;
   max-height: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   @media only screen and (max-width: 768px) {
     font-size: 15px;
     margin-top: -10px;
     height: 50px;
+    width: 125px;
   }
 `
 
@@ -116,7 +125,7 @@ export const TitleAndDescription = styled.div`
   flex-direction: column;
   font-weight: 550;
   color: grey;
-  gap: 5px;
+  gap: 20px;
 
   @media only screen and (max-width: 768px) {
     width: 150px;

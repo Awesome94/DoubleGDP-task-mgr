@@ -24,7 +24,7 @@ const TasksList = () => {
   return (
     <TaskItems>
       {tasks.map((task) => (
-        <TaskItem>
+        <TaskItem key={task.id}>
           <CheckBoxContainer>
             <label>
               <CheckMark
