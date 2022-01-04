@@ -24,19 +24,16 @@ const TasksStatistics = () => {
   )
   const titles = [
     {
-      propVal: 'tasksClosed',
       label: 'Total Tasks Closed',
       textColor: '#FC8801',
       value: closedTasks,
     },
     {
-      propVal: 'tasksOpen',
       label: 'Total Tasks Open',
       textColor: '#FC8801',
       value: openTasks,
     },
     {
-      propVal: 'completitionRate',
       label: 'Completion Rate',
       value: (percentage || 0) + '%',
     },
