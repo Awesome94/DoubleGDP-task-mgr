@@ -4,7 +4,11 @@ Simple responsive task manager app built with [React](https://reactjs.org/).
 
 ## Demo
 
-<https://user-images.githubusercontent.com/19547833/122728644-03b8f800-d281-11eb-8557-616d0b43e452.mp4>
+
+
+https://user-images.githubusercontent.com/19547833/148038304-cec7cd92-10ad-4459-b948-09ac72095325.mp4
+
+
 
 ## Running Locally
 
