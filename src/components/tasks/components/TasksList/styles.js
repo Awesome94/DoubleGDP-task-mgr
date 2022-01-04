@@ -15,14 +15,15 @@ export const TaskName = styled.h1`
   }
 `
 export const TaskDescription = styled.h6`
-  margin-top: -0.5px;
+  margin-top: -20px;
   font-weight: 200;
   font-size: 20px;
   color: grey;
-
+  max-height: 100px;
   @media only screen and (max-width: 768px) {
     font-size: 15px;
-    margin-top: -0.5px;
+    margin-top: -10px;
+    height: 50px;
   }
 `
 
@@ -48,6 +49,7 @@ export const TaskItem = styled.div`
     margin-bottom: -50px;
     display: flex;
     align-items: center;
+    margin-top: auto;
   }
 `
 
@@ -70,6 +72,7 @@ export const TaskItems = styled.div`
     margin: 2px;
     width: 100%;
     gap: 25px;
+    margin-right: -200px;
   }
 `
 
@@ -81,7 +84,6 @@ export const TaskAvatar = styled.img`
   width: 80px;
   height: 80px;
   border-radius: 50px;
-  margin-left: 100px;
   margin-bottom: 35px;
 
   @media only screen and (max-width: 768px) {
@@ -92,18 +94,19 @@ export const TaskAvatar = styled.img`
 
 export const AvatarContainer = styled.div`
   display: flex;
-  width: 200px;
-  justify-content: space-between;
+  width: 100px;
+  height: 80px;
+  justify-content: center;
   margin-left: ${(props) => (props.checked ? '' : '-38px')};
 
   @media only screen and (max-width: 768px) {
-    width: 200px;
-    align-items: center;
-    margin-right: 10px;
-    justify-content: space-between;
-
-    margin-bottom: -20px;
-    margin-left: ${(props) => (props.checked ? '-40px' : '-42px')};
+    width: 100px;
+    align-items: self-start;
+    margin-left: 180px;
+    overflow: padding;
+    justify-content: flex-end;
+    padding: 10px;
+    margin-left: ${(props) => (props.checked ? '10px' : '10px')};
   }
 `
 
@@ -113,6 +116,7 @@ export const TitleAndDescription = styled.div`
   flex-direction: column;
   font-weight: 550;
   color: grey;
+  gap: 5px;
 
   @media only screen and (max-width: 768px) {
     width: 150px;
@@ -122,11 +126,12 @@ export const TitleAndDescription = styled.div`
 
 export const CheckBoxContainer = styled.div`
   display: flex;
+  justify-content: center;
 
   @media only screen and (max-width: 768px) {
     width: 10px;
     height: 60px;
-    padding: 5px;
-    margin-right: -20px;
+    cursor: pointer;
+    margin-left: 15px;
   }
 `
