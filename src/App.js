@@ -1,11 +1,11 @@
 import './App.css'
 import CreateNewTask from './components/tasks/components/CreateNewTask'
 import TaskListPage from './components/tasks/TasksListPage'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="App">
         <header className="App-header" />
       </div>
@@ -13,7 +13,7 @@ function App() {
         <Route index element={<TaskListPage />} />
         <Route path="add" element={<CreateNewTask />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
 

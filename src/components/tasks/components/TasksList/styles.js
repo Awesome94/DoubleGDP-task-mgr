@@ -125,10 +125,11 @@ export const TitleAndDescription = styled.div`
   flex-direction: column;
   font-weight: 550;
   color: grey;
-  gap: 20px;
+  gap: 5px;
 
   @media only screen and (max-width: 768px) {
     width: 150px;
+    gap: 20px;
     justify-content: space-between;
   }
 `

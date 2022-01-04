@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useTasks } from '../../../../providers/TaskProvider'
+import { useTasks } from '../../../../Provider/TaskProvider'
 import { StatisticValue, Title, StatisticLabel, Statistic } from './styles.js'
 
 const TasksStatisticValue = ({ value, text, textColor }) => {
@@ -44,6 +44,7 @@ const TasksStatistics = () => {
       <Title>Stats</Title>
       {titles.map((title) => (
         <TasksStatisticValue
+          key={title.label}
           value={title.value}
           text={title.label}
           textColor={title.textColor}

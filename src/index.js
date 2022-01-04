@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import ThemeContextWrapper from './context/Theme/ThemeContextWrapper'
-import TaskProvider from './providers/TaskProvider.js'
+import TaskProvider from './Provider/TaskProvider.js'
 
 import reportWebVitals from './reportWebVitals'
 

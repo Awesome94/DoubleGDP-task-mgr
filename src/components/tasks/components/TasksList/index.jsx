@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useTasks } from '../../../../providers/TaskProvider.js'
+import { useTasks } from '../../../../Provider/TaskProvider.js'
 import CheckMark from '../../../common/CheckMark'
 import {
   TaskName,
